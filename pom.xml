@@ -11,6 +11,7 @@
 
     <modules>
         <module>resource-plugin-play</module>
+        <module>pass-system-properties</module>
     </modules>
 
 </project>
