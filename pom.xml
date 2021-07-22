@@ -12,6 +12,7 @@
     <modules>
         <module>resource-plugin-play</module>
         <module>pass-system-properties</module>
+        <module>multi-release-jar</module>
     </modules>
 
 </project>
