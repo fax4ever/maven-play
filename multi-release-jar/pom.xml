@@ -21,7 +21,7 @@
             <plugin>
                 <groupId>org.moditect</groupId>
                 <artifactId>moditect-maven-plugin</artifactId>
-                <version>1.0.0.Beta2</version>
+                <version>1.0.0.RC1</version>
                 <executions>
                     <execution>
                         <id>add-module-infos</id>
@@ -32,14 +32,12 @@
                         <configuration>
                             <jvmVersion>9</jvmVersion>
                             <module>
-                                <moduleInfo>
-                                    <name>fax.play.multireleasejar</name>
-                                    <exports>
-                                        !fax.play.inn;
-                                        !fax.play.inn.*;
-                                        *;
-                                    </exports>
-                                </moduleInfo>
+                                <moduleInfoSource>
+                                    module fax.play.multireleasejar {
+                                        exports fax.play.ext;
+                                        exports fax.play.ext.service;
+                                    }
+                                </moduleInfoSource>
                             </module>
                         </configuration>
                     </execution>
