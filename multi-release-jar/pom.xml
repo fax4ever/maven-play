@@ -16,6 +16,14 @@
         <maven.compiler.target>11</maven.compiler.target>
     </properties>
 
+    <dependencies>
+        <dependency>
+            <groupId>javax.enterprise</groupId>
+            <artifactId>cdi-api</artifactId>
+            <version>2.0</version>
+        </dependency>
+    </dependencies>
+
     <build>
         <plugins>
             <plugin>
@@ -32,12 +40,17 @@
                         <configuration>
                             <jvmVersion>9</jvmVersion>
                             <module>
-                                <moduleInfoSource>
-                                    module fax.play.multireleasejar {
-                                        exports fax.play.ext;
-                                        exports fax.play.ext.service;
-                                    }
-                                </moduleInfoSource>
+                                <moduleInfo>
+                                    <name>fax.play.multireleasejar</name>
+                                    <exports>
+                                        !*inn*;
+                                        *;
+                                    </exports>
+                                    <requires>
+                                        !cdi.api;
+                                        *;
+                                    </requires>
+                                </moduleInfo>
                             </module>
                         </configuration>
                     </execution>

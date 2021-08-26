@@ -6,5 +6,12 @@
  */
 package fax.play.inn.service;
 
+import javax.enterprise.inject.spi.BeanManager;
+
 public class CatService {
+
+    public void beforeBeanManagerDestroyed(BeanManager beanManager) {
+
+    }
+
 }
