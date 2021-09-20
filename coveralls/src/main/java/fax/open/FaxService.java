@@ -6,9 +6,15 @@
  */
 package fax.open;
 
+import org.hibernate.search.mapper.pojo.route.impl.DocumentRouteDescriptorDto;
+
 public class FaxService {
 
 	public String generate(int seed) {
+		DocumentRouteDescriptorDto build = DocumentRouteDescriptorDto.newBuilder()
+				.setRoutingKey( "ciao" )
+				.build();
+
 		if ( seed % 1 == 0 ) {
 			return "classic fixed message";
 		}
