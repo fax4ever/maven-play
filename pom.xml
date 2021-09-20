@@ -14,6 +14,7 @@
         <module>pass-system-properties</module>
         <module>multi-release-jar</module>
         <module>cpsuite</module>
+        <module>coveralls</module>
     </modules>
 
 </project>
