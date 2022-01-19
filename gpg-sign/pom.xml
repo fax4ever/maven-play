@@ -40,9 +40,6 @@
                                 <goals>
                                     <goal>sign</goal>
                                 </goals>
-                                <configuration>
-                                    <passphrase>${env.RELEASE_GPG_PASSPHRASE}</passphrase>
-                                </configuration>
                             </execution>
                         </executions>
                     </plugin>
